@@ -1,0 +1,23 @@
+/*C3*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C4*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C6*/SET SCHEMA PUBLIC
+create sequence Concerts_SEQ start with 1 increment by 50
+create sequence Payment_SEQ start with 1 increment by 50
+create sequence Tickets_SEQ start with 1 increment by 50
+create sequence Users_SEQ start with 1 increment by 50
+create table Concerts (capacity integer not null, price float(53), date timestamp(6), id bigint not null, organizer_id bigint, description varchar(255), location varchar(255), title varchar(255), primary key (id))
+create table Payment (amount float(53), id bigint not null, paymentDate timestamp(6), ticket_id bigint unique, paymentMethod varchar(255) check (paymentMethod in ('CREDIT_CARD','PAYPAL','STRIPE')), status varchar(255) check (status in ('PENDING','CONFIRMED','FAILED')), primary key (id))
+create table Tickets (buyer_id bigint, concert_id bigint, id bigint not null, purchaseDate timestamp(6), status varchar(255) check (status in ('VALID','CANCELLED','USED')), primary key (id))
+create table Users (id bigint not null, email varchar(255), name varchar(255), password varchar(255), role varchar(255) check (role in ('ADMIN','ORGANIZER','CUSTOMER')), primary key (id))
+alter table Concerts add constraint FK6d1m5hl2pug626bmuh9b4jw0r foreign key (organizer_id) references Users
+alter table Payment add constraint FK8dmh3mcxe7mn4o8u8l1bhxg98 foreign key (ticket_id) references Tickets
+alter table Tickets add constraint FK4hb6uuuco2yjaaffbrke07eh3 foreign key (buyer_id) references Users
+alter table Tickets add constraint FKpkcth7ajh81gr060820hm0iut foreign key (concert_id) references Concerts
+DISCONNECT
+/*C7*/SET SCHEMA PUBLIC
+INSERT INTO USERS VALUES(1,'bob@mail.com','aline',NULL,'ORGANIZER')
+ALTER SEQUENCE PUBLIC.USERS_SEQ RESTART WITH 51
+COMMIT
+DISCONNECT
