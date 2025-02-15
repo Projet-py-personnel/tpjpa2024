@@ -1,6 +1,5 @@
 package dao;
 
-import domain.Users;
 import jakarta.persistence.EntityTransaction;
 import jpa.EntityManagerHelper;
 

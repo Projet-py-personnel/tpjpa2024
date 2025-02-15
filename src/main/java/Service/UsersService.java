@@ -1,8 +1,6 @@
 package Service;
 
 import dao.UserDao;
-import domain.Roles;
-import domain.Users;
 import jakarta.persistence.EntityManager;
 
 public class UsersService {

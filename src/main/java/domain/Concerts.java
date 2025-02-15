@@ -5,6 +5,9 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+
+
+
 @Entity
 public class Concerts {
 
@@ -19,14 +22,17 @@ public class Concerts {
     private int capacity;
 
     @ManyToOne
-    private Users organizer;
+    private Organisateur organizer;
 
     @OneToMany(mappedBy = "concert", cascade = CascadeType.ALL)
     private List<Tickets> tickets = new ArrayList<>();
 
+    @ManyToMany(mappedBy = "concert", cascade = CascadeType.ALL)
+    private List<Organisateur> organisateurs = new ArrayList<>();
+
     public Concerts() {}
 
-    public Concerts(int capacity, LocalDateTime date, String description, Long id, String location, Users organizer, Double price, List<Tickets> tickets, String title) {
+    public Concerts(int capacity, LocalDateTime date, String description, Long id, String location, Organisateur organizer, Double price, List<Tickets> tickets, String title) {
         this.capacity = capacity;
         this.date = date;
         this.description = description;
@@ -38,7 +44,7 @@ public class Concerts {
         this.title = title;
     }
 
-    public Concerts(int capacity, LocalDateTime date, String description, String location, Users organizer, Double price, String title, List<Tickets> tickets) {
+    public Concerts(int capacity, LocalDateTime date, String description, String location, Organisateur organizer, Double price, String title, List<Tickets> tickets) {
     }
 
     public int getCapacity() {
@@ -81,11 +87,11 @@ public class Concerts {
         this.location = location;
     }
 
-    public Users getOrganizer() {
+    public Organisateur getOrganizer() {
         return organizer;
     }
 
-    public void setOrganizer(Users organizer) {
+    public void setOrganizer(Organisateur organizer) {
         this.organizer = organizer;
     }
 

@@ -1,8 +1,5 @@
 package jpa;
-import Service.ConcertsService;
 import Service.UsersService;
-import domain.Roles;
-import domain.Users;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 

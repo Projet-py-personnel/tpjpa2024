@@ -5,72 +5,71 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "tickets")
 public class Tickets {
+
+    /// Les attributs de Tickets:
+    /// Les informations du clients et
+    /// Les informations du concert
     @Id
     @GeneratedValue
     private Long id;
-
+    @ManyToOne
+    private Client buyer;
     @ManyToOne
     private Concerts concert;
-
-    @ManyToOne
-    private Users buyer;
-
     private LocalDateTime purchaseDate;
+    private String paymentMethod;
 
-    @Enumerated(EnumType.STRING)
-    private StatusTickets status;
-
-    @OneToOne(mappedBy = "ticket", cascade = CascadeType.ALL)
-    private Payment payment;
-
+    /// Les constructeurs de Tickets:
     public Tickets() {}
+    public Tickets(Client buyer, Concerts concert, LocalDateTime purchaseDate, String paymentMethod) {
+        this.buyer = buyer;
+        this.concert = concert;
+        this.purchaseDate = purchaseDate;
+        this.paymentMethod = paymentMethod;
+    }
+    /// Les méthodes de Tickets:
 
-    public Users getBuyer() {
-        return buyer;
+    /// les getters
+    public Long getId() {
+        return id;
     }
 
-    public void setBuyer(Users buyer) {
-        this.buyer = buyer;
+    public Client getBuyer() {
+        return buyer;
     }
 
     public Concerts getConcert() {
         return concert;
     }
 
-    public void setConcert(Concerts concert) {
-        this.concert = concert;
+    public LocalDateTime getPurchaseDate() {
+        return purchaseDate;
     }
 
-    public Long getId() {
-        return id;
+    public String getPaymentMethod() {
+        return paymentMethod;
     }
-
+    /// les setters
     public void setId(Long id) {
         this.id = id;
     }
 
-    public Payment getPayment() {
-        return payment;
+    public void setBuyer(Client buyer) {
+        this.buyer = buyer;
     }
 
-    public void setPayment(Payment payment) {
-        this.payment = payment;
-    }
-
-    public LocalDateTime getPurchaseDate() {
-        return purchaseDate;
+    public void setConcert(Concerts concert) {
+        this.concert = concert;
     }
 
     public void setPurchaseDate(LocalDateTime purchaseDate) {
         this.purchaseDate = purchaseDate;
     }
 
-    public StatusTickets getStatus() {
-        return status;
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
     }
 
-    public void setStatus(StatusTickets status) {
-        this.status = status;
-    }
 }
