@@ -5,8 +5,48 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b87420e5-e594-4a66-9026-3789b4eb458c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/test.lck" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/test.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/test.script" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/AdminService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/ClientService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Service/TicketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/AbstractJpaDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/AdminDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ClientDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ConcertDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/IGenericDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/TicketDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/testjpa.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Service/AdminService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Service/ClientService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/Service/TicketService.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao/AbstractJpaDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao/AdminDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao/ClientDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao/ConcertDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao/IGenericDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/dao/TicketDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/ConcertsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ConcertsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/OrganisateurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/OrganisateurService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/OrganisateurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/OrganisateurDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Administrateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Administrateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Concert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Concert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Organisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Organisateur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Personne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/JpaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/JpaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/ConcertsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/ConcertsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/OrganisateurService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/OrganisateurService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/OrganisateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/OrganisateurDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Administrateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Administrateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Concert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Concert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Organisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Organisateur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Personne.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Personne.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Ticket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jpa/JpaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/JpaTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,31 +74,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;branch2&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/herve/Downloads/test.lck&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "Merging master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/herve/Downloads/test.lck",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="tpjpa2024" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <option name="filePath" />
-      <method v="2" />
     </configuration>
   </component>
   <component name="SharedIndexes">
@@ -82,6 +118,7 @@
       <workItem from="1739615507851" duration="39791000" />
       <workItem from="1739730110710" duration="5152000" />
       <workItem from="1739746274036" duration="105000" />
+      <workItem from="1739746420130" duration="383000" />
     </task>
     <servers />
   </component>
