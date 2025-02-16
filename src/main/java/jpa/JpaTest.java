@@ -43,11 +43,11 @@ public class JpaTest {
 
 		try {
 			// TODO create and persist entity
-			ClientService clientService = new ClientService();
-			test.addPersonToDatabase(clientService);
+			//ClientService clientService = new ClientService();
+			//test.addPersonToDatabase(clientService);
 			// TODO create and persist entity
-			ConcertsService concertsService = new ConcertsService();
-			test.addConcertToDb(concertsService);
+			//ConcertsService concertsService = new ConcertsService();
+			//test.addConcertToDb(concertsService);
 
 			TicketService ticketService = new TicketService();
 			test.addTicketToDb(ticketService);
