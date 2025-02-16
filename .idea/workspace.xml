@@ -4,50 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b87420e5-e594-4a66-9026-3789b4eb458c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/data/test.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/test.script" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/AdminService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/ClientService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Service/TicketService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/AbstractJpaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/AdminDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ClientDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ConcertDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/IGenericDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/TicketDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/META-INF/testjpa.kotlin_module" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Service/AdminService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Service/ClientService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/Service/TicketService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dao/AbstractJpaDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dao/AdminDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dao/ClientDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dao/ConcertDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dao/IGenericDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/dao/TicketDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/ConcertsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ConcertsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Service/OrganisateurService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/OrganisateurService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/OrganisateurDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/OrganisateurDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Administrateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Administrateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Concert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Concert.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Organisateur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Organisateur.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Personne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Ticket.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/JpaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/JpaTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/ConcertsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/ConcertsService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Service/OrganisateurService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/OrganisateurService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/OrganisateurDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/OrganisateurDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Administrateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Administrateur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Concert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Concert.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Organisateur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Organisateur.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Personne.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Personne.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/domain/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Ticket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jpa/JpaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/JpaTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="b87420e5-e594-4a66-9026-3789b4eb458c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -78,7 +35,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "Merging master",
+    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/herve/Downloads/test.lck",
     "node.js.detected.package.eslint": "true",
@@ -118,7 +75,7 @@
       <workItem from="1739615507851" duration="39791000" />
       <workItem from="1739730110710" duration="5152000" />
       <workItem from="1739746274036" duration="105000" />
-      <workItem from="1739746420130" duration="383000" />
+      <workItem from="1739746420130" duration="956000" />
     </task>
     <servers />
   </component>
