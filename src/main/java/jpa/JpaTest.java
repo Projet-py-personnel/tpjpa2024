@@ -14,8 +14,9 @@ public class JpaTest {
 	public void addToDatabase(UsersService usersService) {
 		// Ajouter des utilisateurs
 		Users user = new Users();
-		user.setName("aline");
-		user.setEmail("bob@mail.com");
+		user.setName("toto");
+		user.setEmail("bototo@mail.com");
+		user.setPassword("vvvvvvv");
 		user.setRole(Roles.ORGANIZER);
 		usersService.addUser(user);
 	}
