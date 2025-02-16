@@ -2,12 +2,13 @@ package domain;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name="administrateurs")
-public class Administrateur extends Personne{
+public class Administrateur extends Personne implements Serializable {
     @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name="admin_id")
     private List<Concert> concerts = new ArrayList<>();

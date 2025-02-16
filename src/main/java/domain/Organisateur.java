@@ -2,13 +2,14 @@ package domain;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 /*Au sein de la base de données, ces relations seront modélisées grâce à des clés étrangères (pour Un à un et Un à plusieurs), ou bien une table de jointure (pour Plusieurs à plusieurs)*/
 
 @Entity
 @Table(name="organisateurs")
-public class Organisateur extends Personne{
+public class Organisateur extends Personne implements Serializable {
     /// attributs
 
     private String groupe;//son entreprise par exemple

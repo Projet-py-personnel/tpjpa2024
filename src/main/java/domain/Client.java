@@ -6,13 +6,14 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import org.hsqldb.rights.User;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import static jakarta.persistence.CascadeType.ALL;
 @Entity
 @Table(name="clients")
-public class Client extends Personne {
+public class Client extends Personne implements Serializable {
     /// les attributs de la classe
     /// préfèrera utiliser les anotations
     /// sur les méthodes plutôt que sur les attributs

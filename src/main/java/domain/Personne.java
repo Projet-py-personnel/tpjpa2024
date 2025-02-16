@@ -3,13 +3,14 @@ package domain;
 import jakarta.persistence.*;
 import javax.management.relation.Role;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /*@Entity
 @Table(name = "personnes")*/
 @MappedSuperclass
-public class Personne {
+public class Personne{
     /// les attributs de la classse personne
     @Id
     @GeneratedValue
