@@ -2,7 +2,7 @@ package Service;
 
 import dao.OrganisateurDao;
 import domain.Organisateur;
-import jakarta.persistence.EntityManager;
+
 
 public class OrganisateurService {
 
