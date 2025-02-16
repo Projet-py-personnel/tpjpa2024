@@ -5,16 +5,13 @@ import org.mindrot.jbcrypt.BCrypt;
 
 public class JpaTest {
 
-
-
-
 	public void addToDatabase(OrganisateurService organisateurService) {
 		// Ajouter des client
 		Organisateur organisateur = new Organisateur();
-		organisateur.setName("toto");
-		organisateur.setEmail("bototo@mail.com");
-		organisateur.setGroupe("Olasoft");
-		String hashedPassword = BCrypt.hashpw("vvvvvvv", BCrypt.gensalt());
+		organisateur.setName("tata");
+		organisateur.setEmail("tavatoto@mail.com");
+		organisateur.setGroupe("soft");
+		String hashedPassword = BCrypt.hashpw("vvvffevvdffsqbv", BCrypt.gensalt());
 		organisateur.setPassword(hashedPassword);
 		organisateurService.addUser(organisateur);
 	}
