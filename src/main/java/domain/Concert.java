@@ -2,15 +2,13 @@ package domain;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
 
 
 @Entity
 @Table(name = "concerts")//on peut s'en passer si les noms sont similaires
-public class Concert {
+public class Concert implements Serializable {
     /// attributs de concert
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY) //auto incrémentation
@@ -30,9 +28,6 @@ public class Concert {
 
    /* @OneToMany(mappedBy = "concert", cascade = CascadeType.ALL, fetch = FetchType.LAZY,orphanRemoval=true)
     private List<Ticket> tickets = new ArrayList<>(); pour moi concert n'a pas besoin de la liste de tickets*/
-
-
-
 
     /// constructeurs
 
@@ -80,7 +75,7 @@ public class Concert {
         doit etre dans la classe association organisation
     }*/
 
-    public String getArtiste() {
+    public String getArtiste(String stare) {
         return artiste;
     }
 

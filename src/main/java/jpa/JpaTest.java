@@ -1,21 +1,36 @@
 package jpa;
-import Service.OrganisateurService;
-import domain.Organisateur;
+import Service.*;
+import domain.*;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class JpaTest {
 
-	public void addToDatabase(OrganisateurService organisateurService) {
-		// Ajouter des client
-		Organisateur organisateur = new Organisateur();
-		organisateur.setName("tata");
-		organisateur.setEmail("tavatoto@mail.com");
-		organisateur.setGroupe("soft");
+	public void addPersonToDatabase(ClientService clientService) {
+		// Ajout personne
+		Client client = new Client();
+		client.setName("Pola titi");
+		client.setEmail("Popotiti@mail.com");
 		String hashedPassword = BCrypt.hashpw("vvvffevvdffsqbv", BCrypt.gensalt());
-		organisateur.setPassword(hashedPassword);
-		organisateurService.addUser(organisateur);
+		client.setPassword(hashedPassword);
+		clientService.addClient(client);
 	}
 
+	public void addConcertToDb(ConcertsService concertsService){
+
+		// Ajout Concerts
+		Concert concert = new Concert();
+		concert.setTitle("Concert");
+		concert.setDescription("Concert tres exitant");
+		concert.setLocation("Stade Rennes");
+		concert.setArtiste("Star");
+		concertsService.addConcert(concert);
+	}
+
+	public void addTicketToDb(TicketService ticketService){
+
+		Ticket ticket = new Ticket();
+		ticketService.addTicket(ticket);
+	}
 	public JpaTest() {
 
 	}
@@ -24,13 +39,19 @@ public class JpaTest {
 	 */
 	public static void main(String[] args) {
 
-
 		JpaTest test = new JpaTest();
 
 		try {
 			// TODO create and persist entity
-			OrganisateurService organisateurService = new OrganisateurService();
-			test.addToDatabase(organisateurService);// service appelle dao
+			//ClientService clientService = new ClientService();
+			//test.addPersonToDatabase(clientService);
+			// TODO create and persist entity
+			//ConcertsService concertsService = new ConcertsService();
+			//test.addConcertToDb(concertsService);
+
+			TicketService ticketService = new TicketService();
+			test.addTicketToDb(ticketService);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

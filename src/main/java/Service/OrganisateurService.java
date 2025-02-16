@@ -11,6 +11,7 @@ public class OrganisateurService {
 
     // Ajouter un utilisateur
     public void addUser(Organisateur organisateur) {
+
         dao.save(organisateur);
     }
 
