@@ -1,19 +1,20 @@
 package jpa;
+import Service.AdminService;
 import Service.OrganisateurService;
+import domain.Administrateur;
 import domain.Organisateur;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class JpaTest {
 
-	public void addToDatabase(OrganisateurService organisateurService) {
-		// Ajouter des client
-		Organisateur organisateur = new Organisateur();
-		organisateur.setName("tata");
-		organisateur.setEmail("tavatoto@mail.com");
-		organisateur.setGroupe("soft");
+	public void addToDatabase(AdminService adminService) {
+		// Ajout personne
+		Administrateur admin = new Administrateur();
+		admin.setName("Pipo");
+		admin.setEmail("Popo@mail.com");
 		String hashedPassword = BCrypt.hashpw("vvvffevvdffsqbv", BCrypt.gensalt());
-		organisateur.setPassword(hashedPassword);
-		organisateurService.addUser(organisateur);
+		admin.setPassword(hashedPassword);
+		adminService.addAdmin(admin);
 	}
 
 	public JpaTest() {
@@ -29,8 +30,8 @@ public class JpaTest {
 
 		try {
 			// TODO create and persist entity
-			OrganisateurService organisateurService = new OrganisateurService();
-			test.addToDatabase(organisateurService);// service appelle dao
+			AdminService adminService = new AdminService();
+			test.addToDatabase(adminService);// service appelle dao
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
