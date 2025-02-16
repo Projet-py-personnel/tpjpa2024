@@ -1,5 +1,6 @@
 package jpa;
-import Service.UsersService;
+import Service.ClientService;
+import domain.Client;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 
@@ -8,15 +9,28 @@ public class JpaTest {
 	private EntityManager manager;
 
 
-	public void addToDatabase(UsersService usersService) {
+	public void addClientToDatabase(ClientService clientService) {
 		// Ajouter des utilisateurs
-		Users user = new Users();
-		user.setName("aline");
-		user.setEmail("bob@mail.com");
-		user.setRole(Roles.ORGANIZER);
-		usersService.addUser(user);
+		Client client = new Client();
+		client.setName("aline");
+		client.setEmail("bob@mail.com");
+		ClientService.addClient(client);
 	}
-
+	public void addAdministrateurToDatabase(ClientService usersService) {
+		// Ajouter des admins en db
+	}
+	public void addConcertToDatabase(ClientService usersService) {
+		// Ajouter des admins en db
+	}
+	public void addOrganisateurToDatabase(ClientService usersService) {
+		// Ajouter des admins en db
+	}
+	public void addPersonneToDatabase(ClientService usersService) {
+		// Ajouter des admins en db
+	}
+	public void addTicketToDatabase(ClientService usersService) {
+		// Ajouter des admins en db
+	}
 	public JpaTest(EntityManager manager) {
 		this.manager = manager;
 	}
@@ -32,8 +46,8 @@ public class JpaTest {
 		tx.begin();
 		try {
 			// TODO create and persist entity
-			UsersService usersService = new UsersService();
-			test.addToDatabase(usersService);
+			ClientService clientService = new ClientService();
+			test.addClientToDatabase(clientService);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
