@@ -1,24 +1,24 @@
 package jpa;
-import Service.ConcertsService;
-import Service.UsersService;
-import domain.Roles;
-import domain.Users;
+import Service.OrganisateurService;
+import domain.Organisateur;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
+import org.mindrot.jbcrypt.BCrypt;
 
 public class JpaTest {
 
 	private EntityManager manager;
 
 
-	public void addToDatabase(UsersService usersService) {
-		// Ajouter des utilisateurs
-		Users user = new Users();
-		user.setName("toto");
-		user.setEmail("bototo@mail.com");
-		user.setPassword("vvvvvvv");
-		user.setRole(Roles.ORGANIZER);
-		usersService.addUser(user);
+	public void addToDatabase(OrganisateurService organisateurService) {
+		// Ajouter des client
+		Organisateur organisateur = new Organisateur();
+		organisateur.setName("toto");
+		organisateur.setEmail("bototo@mail.com");
+		organisateur.setGroupe("Olasoft");
+		String hashedPassword = BCrypt.hashpw("vvvvvvv", BCrypt.gensalt());
+		organisateur.setPassword(hashedPassword);
+		organisateurService.addUser(organisateur);
 	}
 
 	public JpaTest(EntityManager manager) {
@@ -36,8 +36,8 @@ public class JpaTest {
 		tx.begin();
 		try {
 			// TODO create and persist entity
-			UsersService usersService = new UsersService();
-			test.addToDatabase(usersService);
+			OrganisateurService organisateurService = new OrganisateurService();
+			test.addToDatabase(organisateurService);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
