@@ -2,23 +2,20 @@ package domain;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tickets")
-public class Ticket {
+public class Ticket implements Serializable {
 
     /// Les attributs de Tickets:
     /// Les informations du clients et
     /// Les informations du concert
     /// mappedBy. Cette propriété est valide dans le contexte de la bidirectionnalité, car elle indique le nom de l’attribut dans l’autre entité
-    @Id
-    @GeneratedValue
+
     private Long id;
-    @ManyToOne
     private Client buyer;
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "concert_id")
     private Concert concert;
     private LocalDateTime purchaseDate;
     private String paymentMethod;
@@ -35,14 +32,18 @@ public class Ticket {
     /// Les méthodes de Tickets:
 
     /// les getters
+
+    @Id
+    @GeneratedValue
     public Long getId() {
         return id;
     }
-
+    @ManyToOne
     public Client getBuyer() {
         return buyer;
     }
-
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "concert_id")
     public Concert getConcert() {
         return concert;
     }

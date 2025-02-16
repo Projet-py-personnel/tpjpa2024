@@ -1,12 +1,6 @@
 package jpa;
-import Service.AdminService;
-import Service.ClientService;
-import Service.ConcertsService;
-import Service.OrganisateurService;
-import domain.Administrateur;
-import domain.Client;
-import domain.Concert;
-import domain.Organisateur;
+import Service.*;
+import domain.*;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class JpaTest {
@@ -28,10 +22,15 @@ public class JpaTest {
 		concert.setTitle("Concert");
 		concert.setDescription("Concert tres exitant");
 		concert.setLocation("Stade Rennes");
-		concert.getArtiste("Star");
+		concert.setArtiste("Star");
 		concertsService.addConcert(concert);
 	}
 
+	public void addTicketToDb(TicketService ticketService){
+
+		Ticket ticket = new Ticket();
+		ticketService.addTicket(ticket);
+	}
 	public JpaTest() {
 
 	}
@@ -49,6 +48,9 @@ public class JpaTest {
 			// TODO create and persist entity
 			ConcertsService concertsService = new ConcertsService();
 			test.addConcertToDb(concertsService);
+
+			TicketService ticketService = new TicketService();
+			test.addTicketToDb(ticketService);
 
 		} catch (Exception e) {
 			e.printStackTrace();
