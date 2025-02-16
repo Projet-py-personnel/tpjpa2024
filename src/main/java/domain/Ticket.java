@@ -6,24 +6,27 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tickets")
-public class Tickets {
+public class Ticket {
 
     /// Les attributs de Tickets:
     /// Les informations du clients et
     /// Les informations du concert
+    /// mappedBy. Cette propriété est valide dans le contexte de la bidirectionnalité, car elle indique le nom de l’attribut dans l’autre entité
     @Id
     @GeneratedValue
     private Long id;
     @ManyToOne
     private Client buyer;
-    @ManyToOne
-    private Concerts concert;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "concert_id")
+    private Concert concert;
     private LocalDateTime purchaseDate;
     private String paymentMethod;
+    private Double prix;
 
     /// Les constructeurs de Tickets:
-    public Tickets() {}
-    public Tickets(Client buyer, Concerts concert, LocalDateTime purchaseDate, String paymentMethod) {
+    public Ticket() {}
+    public Ticket(Client buyer, Concert concert, LocalDateTime purchaseDate, String paymentMethod) {
         this.buyer = buyer;
         this.concert = concert;
         this.purchaseDate = purchaseDate;
@@ -40,7 +43,7 @@ public class Tickets {
         return buyer;
     }
 
-    public Concerts getConcert() {
+    public Concert getConcert() {
         return concert;
     }
 
@@ -60,7 +63,7 @@ public class Tickets {
         this.buyer = buyer;
     }
 
-    public void setConcert(Concerts concert) {
+    public void setConcert(Concert concert) {
         this.concert = concert;
     }
 

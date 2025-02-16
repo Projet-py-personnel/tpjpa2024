@@ -1,6 +1,7 @@
 package domain;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import org.hsqldb.rights.User;
@@ -20,18 +21,14 @@ public class Client extends Personne {
     /// cette ligne de code nous sera utile
     /// si on souhaite choisir nous meme le nom
     /// de notre table
-    @OneToMany(cascade=ALL, mappedBy="buyer")
-    private List<Tickets> tickets = new ArrayList<>();
+    @OneToMany(cascade=ALL, mappedBy="buyer",fetch = FetchType.LAZY,orphanRemoval=true)
+    private List<Ticket> tickets = new ArrayList<>();
 
     //constructeurs
 
-    public Client(List<Tickets> tickets) {
-        this.tickets = tickets;
-    }
 
-    public Client(String email, Long id, String name, String password, List<Tickets> tickets) {
-        super(email, id, name, password);
-        this.tickets = tickets;
+    public Client(String email, String name, String password) {
+        super(email, name, password);
     }
 
     public Client() {
@@ -54,13 +51,13 @@ public class Client extends Personne {
     /// the owner of the relationship.
 
 
-    public List<Tickets> getAllTickets() {
+    public List<Ticket> getAllTickets() {
         return tickets;
     }
     /// 1- setTicket(),
     /// enregistre dans la classe
     /// les tickets achetés par le client
-    public void setTickets(List<Tickets> tickets) {
+    public void setTickets(List<Ticket> tickets) {
         this.tickets = tickets;
     }
 }

@@ -8,19 +8,17 @@ import java.util.List;
 @Entity
 @Table(name="administrateurs")
 public class Administrateur extends Personne{
-    @OneToMany(cascade= CascadeType.ALL,mappedBy="organisateurs")
-    private List<Concerts> concerts = new ArrayList<>();
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name="admin_id")
+    private List<Concert> concerts = new ArrayList<>();
 
     /// methodes Administrateur
     ///
     /// constructeurs
-    public Administrateur(List<Concerts> concerts) {
-        this.concerts = concerts;
-    }
 
-    public Administrateur(String email, Long id, String name, String password, List<Concerts> concerts) {
-        super(email, id, name, password);
-        this.concerts = concerts;
+
+    public Administrateur(String email, String name, String password) {
+        super(email, name, password);
     }
 
     public Administrateur() {
@@ -28,10 +26,10 @@ public class Administrateur extends Personne{
     }
 
     /// getters et setters
-    public List<Concerts> getConcerts() {
+    public List<Concert> getConcerts() {
         return concerts;
     }
-    public void setConcerts(List<Concerts> concerts) {
+    public void setConcerts(List<Concert> concerts) {
         this.concerts = concerts;
     }
 

@@ -6,8 +6,9 @@ import javax.management.relation.Role;
 import java.util.ArrayList;
 import java.util.List;
 
-@Entity
-@Table(name = "personnes")
+/*@Entity
+@Table(name = "personnes")*/
+@MappedSuperclass
 public class Personne {
     /// les attributs de la classse personne
     @Id
@@ -25,9 +26,8 @@ public class Personne {
 
     public Personne() {
     }
-    public Personne(String email, Long id, String name, String password){
+    public Personne(String email, String name, String password){
         this.email = email;
-        this.id = id;
         this.name = name;
         this.password = password;
     }

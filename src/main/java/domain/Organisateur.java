@@ -1,12 +1,10 @@
 package domain;
 
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
+/*Au sein de la base de données, ces relations seront modélisées grâce à des clés étrangères (pour Un à un et Un à plusieurs), ou bien une table de jointure (pour Plusieurs à plusieurs)*/
 
 @Entity
 @Table(name="organisateurs")
@@ -14,19 +12,21 @@ public class Organisateur extends Personne{
     /// attributs
 
     private String groupe;//son entreprise par exemple
-    @ManyToMany(cascade= CascadeType.ALL,mappedBy="organisateurs")
-    private List<Concerts> concerts = new ArrayList<>();
+    @ManyToMany(cascade= CascadeType.REMOVE,
+    fetch = FetchType.LAZY
+    )
+    @JoinTable(
+        name="organisateur_concert",
+            joinColumns = @JoinColumn(name="organisateur_id"),
+            inverseJoinColumns = @JoinColumn(name="concert_id")
+
+    )
+    private List<Concert> concerts = new ArrayList<>();
     /// constructeurs
 
-    public Organisateur(String groupe, List<Concerts> concerts) {
-        this.groupe = groupe;
-        this.concerts = concerts;
-    }
 
-    public Organisateur(String email, Long id, String name, String password, String groupe, List<Concerts> concerts) {
-        super(email, id, name, password);
-        this.groupe = groupe;
-        this.concerts = concerts;
+    public Organisateur(String email, String name, String password) {
+        super(email, name, password);
     }
 
     public Organisateur() {
@@ -41,11 +41,11 @@ public class Organisateur extends Personne{
         this.groupe = groupe;
     }
 
-    public List<Concerts> getConcerts() {
+    public List<Concert> getConcerts() {
         return concerts;
     }
 
-    public void setConcerts(List<Concerts> concerts) {
+    public void setConcerts(List<Concert> concerts) {
         this.concerts = concerts;
     }
     /// autres methodes
