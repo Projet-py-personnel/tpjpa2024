@@ -5,7 +5,7 @@ import domain.Organisateur;
 import jakarta.persistence.EntityManager;
 
 public class OrganisateurService {
-    private EntityManager manager;
+
     OrganisateurDao dao = new OrganisateurDao();
 
 
