@@ -14,7 +14,8 @@ public class EntityManagerHelper {
         threadLocal = new ThreadLocal<EntityManager>();
     }
 
-    public static EntityManager getEntityManager() { // retourne l'entity manager dans le thread local
+    public static EntityManager getEntityManager() {
+        // retourne l'entity manager dans le thread local
         EntityManager em = threadLocal.get();
 
         if (em == null) { // on a un nouveau Thread
@@ -23,6 +24,7 @@ public class EntityManagerHelper {
         }
         return em;
     }
+
 
     public static void closeEntityManager() {
         EntityManager em = threadLocal.get();
