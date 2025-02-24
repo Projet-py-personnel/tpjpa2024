@@ -17,11 +17,14 @@ public class ClientService {
     public static void updateName(String newName, String oldName) {
         dao.updateName(newName,oldName);
     }
-    public static void deleteClient(Integer id) {
-        dao.delete(id);
+    public static void deleteClient(List<Integer> ids) {
+        dao.delete(ids);
     }
     public static List<Client> getClient(List<Integer> ids) {
        return dao.get(ids);
+    }
+    public static List<Client> getAllClients() {
+        return dao.getAllClients();
     }
 
 }

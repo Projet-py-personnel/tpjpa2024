@@ -19,13 +19,17 @@ public class JpaTest {
 
 	 return ClientService.getClient( ids );
 	}
+	public List<Client> getAllClients() {
+
+		return ClientService.getAllClients();
+	}
 	public void updateClientOfDatabase(String newName, String oldName) {
 
 		ClientService.updateName(newName, oldName);
 	}
-	public void deleteClientFromDatabase(Integer id) {
+	public void deleteClientFromDatabase(List<Integer> ids) {
 
-		ClientService.deleteClient(id);
+		ClientService.deleteClient(ids);
 	}
 	public void addAdministrateurToDatabase(ClientService usersService) {
 		// Ajouter des admins en db
@@ -88,10 +92,24 @@ public class JpaTest {
 				++i;
 
 			}
+            List<Client>all_clients=test.getAllClients();
+			int j=0;
+			for (Client c : all_clients) {
 
+				System.out.println(all_clients.get(j).getName());
+				++j;
+
+			}
 			//test.updateClientOfDatabase("francky","Franck");
-			//test.deleteClientFromDatabase(153);
 
+			List<Integer> ids_to_delete = new ArrayList<>();
+			ids_to_delete.add(2);
+			ids_to_delete.add(52);
+			ids_to_delete.add(53);
+			ids_to_delete.add(54);
+			ids_to_delete.add(102);
+			ids_to_delete.add(104);
+			test.deleteClientFromDatabase(ids_to_delete);
 
 		} catch (Exception e) {
 			e.printStackTrace();

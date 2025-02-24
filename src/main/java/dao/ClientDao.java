@@ -45,7 +45,7 @@ public class ClientDao {
         //et etre capable de changer tous les attributs qu'elle veut
 
     }
-    public void delete(Integer id) {
+    public void delete(List<Integer> ids) {
 
 
 
@@ -61,10 +61,16 @@ public class ClientDao {
         Root e = delete.from(Client.class);
 
         // set where clause
-        delete.where(cb.equal(e.get("id"), id));
+        delete.where(
+                cb.in(
+                        e.get("id")).value(ids)
+        );
 
         // perform update
-        this.manager.createQuery(delete).executeUpdate();
+        this.manager
+                .createQuery(delete)
+                .setHint("id", "client")
+                .executeUpdate();
         tx.commit();
 
 
@@ -93,5 +99,30 @@ public class ClientDao {
         tx.commit();
         return posts;
     }
+    public List<Client> getAllClients() {
+
+
+        EntityTransaction tx = manager.getTransaction();
+        tx.begin();
+        CriteriaBuilder cb = this.manager.getCriteriaBuilder();
+        // create get query
+        CriteriaQuery<Client> get = cb.createQuery(Client.class);
+        // set the root class
+
+        Root e = get.from(Client.class);
+
+        // match the entire root( table to the query get )
+        get.select(e);
+        //execute the query
+        List<Client> table_content= manager.createQuery(get).getResultList();
+
+        tx.commit();
+        return table_content;
+    }
 
 }
+;
+
+
+
+

@@ -174,7 +174,7 @@ Puis cette méthode dans JPATEST:
 public Client getClientFromDatabase(Integer id) {
 return ClientService.getClient( id );
 }
-4- get une liste d'id pour obtenir une liste de clients (meme schéma que les précédents ):
+4) get une liste d'id pour obtenir une liste de clients (meme schéma que les précédents ):
 https://stackoverflow.com/questions/71208850/add-query-hint-inside-of-jpa-specification
 https://stackoverflow.com/questions/5705291/select-in-equivalent-in-jpa2-criteria
 
@@ -225,3 +225,95 @@ List<Client> clients_result=test.getClientsFromDatabase(ids);
 				++i;
 
 			}
+5) charger la table entière des clients
+    https://stackoverflow.com/questions/11669868/jpa-criteria-query-load-entire-table
+    in dao file paste this code : 
+   public List<Client> getAllClients() {
+
+
+        EntityTransaction tx = manager.getTransaction();
+        tx.begin();
+        CriteriaBuilder cb = this.manager.getCriteriaBuilder();
+        // create get query
+        CriteriaQuery<Client> get = cb.createQuery(Client.class);
+        // set the root class
+
+        Root e = get.from(Client.class);
+
+        // match the entire root( table to the query get ) 
+        get.select(e);
+        //execute the query
+        List<Client> table_content= manager.createQuery(get).getResultList();
+       
+        tx.commit();
+        return table_content;
+    }
+in clientService file :
+public static List<Client> getAllClients() {
+return dao.getAllClients();
+}
+in JPATEST methods :
+public List<Client> getAllClients() {
+
+return ClientService.getAllClients();
+}
+in JPATEST main method:
+List<Client>all_clients=test.getAllClients();
+int j=0;
+for (Client c : all_clients) {
+
+System.out.println(all_clients.get(j).getName());
+++j;
+
+}
+6) suppressions simultanés d'une liste de clients :
+   dans le dao coller le code suivant :
+  
+   public void delete(List<Integer> ids) {
+
+
+
+        EntityTransaction tx = manager.getTransaction();
+        tx.begin();
+        CriteriaBuilder cb = this.manager.getCriteriaBuilder();
+
+        // create delete
+        CriteriaDelete<Client> delete = cb.
+                createCriteriaDelete(Client.class);
+
+        // set the root class
+        Root e = delete.from(Client.class);
+        
+        // set where clause
+        delete.where(
+                cb.in(
+                        e.get("id")).value(ids)
+        );
+       
+        // perform update
+        this.manager
+                .createQuery(delete)
+                .setHint("id", "client")
+                .executeUpdate();
+        tx.commit();
+
+
+    }
+   Dans la couche service :
+   public static void deleteClient(List<Integer> ids) {
+   dao.delete(ids);
+   }
+   Dans la couche JpaTest :
+   public void deleteClientFromDatabase(List<Integer> ids) {
+
+ClientService.deleteClient(ids);
+}
+Dans la method main du meme JPATEST :
+List<Integer> ids_to_delete = new ArrayList<>();
+ids_to_delete.add(2);
+ids_to_delete.add(52);
+ids_to_delete.add(53);
+ids_to_delete.add(54);
+ids_to_delete.add(102);
+ids_to_delete.add(104);
+test.deleteClientFromDatabase(ids_to_delete);
