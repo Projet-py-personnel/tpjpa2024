@@ -322,4 +322,4 @@ Après si on veut extrapoler on peut faire suppression de la table entière.
     https://thorben-janssen.com/criteria-updatedelete-easy-way-to/ (syntax)
     https://stackoverflow.com/questions/36601251/how-to-open-an-entity-manager-after-a-close (reopen an em)
     https://www.jmdoudoux.fr/java/dej/chap-javadoc.htm (tuto javadoc)
-    https://www.markdowntutorial.com/lesson/2/
+    https://www.markdowntutorial.com/lesson/2/ 

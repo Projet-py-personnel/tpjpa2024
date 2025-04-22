@@ -94,16 +94,11 @@ public class JpaTest {
 
 			/// Suppression d'une liste de clients de la bd
 			List<Integer> ids_to_delete = new ArrayList<>();
-			ids_to_delete.add(2);
-			ids_to_delete.add(52);
-			ids_to_delete.add(53);
-			ids_to_delete.add(54);
-			ids_to_delete.add(102);
-			ids_to_delete.add(104);
+			ids_to_delete.add(103);
 			test.deleteClientFromDatabase(ids_to_delete);
 
 			/// Mise à jour du nom d'un client de la bd
-			test.updateClientOfDatabase("francky","Franck");
+			test.updateClientOfDatabase("Aline","Franck");
 
 		} catch (Exception e) {
 			e.printStackTrace();
