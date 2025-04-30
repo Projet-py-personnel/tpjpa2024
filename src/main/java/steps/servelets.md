@@ -227,5 +227,6 @@ Ensuite :
 > 
 Mercredi 30/04/2025 de 20h à 21h30 objectif faire fonctionner le servelet...
     
+>Note : le merging button disparait seulement après avoir fait un commit, un push, sinon il rest là avec l'option abort merge
 
 

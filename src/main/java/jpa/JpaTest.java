@@ -53,7 +53,7 @@ public class JpaTest {
 
 		JpaTest test = new JpaTest();
 		Client c1,c2,c3;
-		c1=new Client("jojo@gmail.com", "Jojo", "jojo");
+		c1=new Client("jijo@gmail.com", "Jojo", "jojo");
 		c2=  new Client("jaja@gmail.com","jaja","jaja");
 		c3=  new Client("jiji@gmail.com","jiji","jiji");
 		ArrayList<Client> clientsLists= new ArrayList<>();
