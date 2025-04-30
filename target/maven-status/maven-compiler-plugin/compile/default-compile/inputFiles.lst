@@ -1,0 +1,15 @@
+C:\logiciels_et_projets\tpjpa2024\src\main\java\dao\ClientDao.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\domain\Administrateur.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\domain\Client.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\domain\Concert.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\domain\Organisateur.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\domain\PaymentMethod.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\domain\Personne.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\domain\StatusTickets.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\domain\Ticket.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\jpa\EntityManagerHelper.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\jpa\JpaTest.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\Service\ClientService.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\Service\ConcertsService.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\servlets\MyServlet.java
+C:\logiciels_et_projets\tpjpa2024\src\main\java\servlets\UserInfo.java
