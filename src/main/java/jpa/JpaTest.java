@@ -1,6 +1,10 @@
 package jpa;
-import Service.ClientService;
+
+import Service.TicketService;
 import domain.Client;
+import domain.Concert;
+import domain.Ticket;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,103 +12,57 @@ public class JpaTest {
 
 	public JpaTest() {}
 
-	/**
-	 * Intervient dans la persistance d'un client en bd
-	 * @param client
-	 * {@link Service.ClientService#addClient(Client)}
-	 */
-	public void addClientToDatabase(Client client) {
-		ClientService.addClient(client);
+	public void addTicketToDatabase(Ticket ticket) {
+		TicketService.addTicket(ticket);
 	}
 
-	/**
-	 * Intervient dans le chargement de clients depuis la bd
-	 * {@link Service.ClientService#getClient(List)}
-	 */
-	public List<Client> getClientsFromDatabase(List<Integer> ids) {
-		return ClientService.getClient( ids );
+	public Ticket getTicketFromDatabase(Long id) {
+		return TicketService.getTicketById(id);
 	}
 
-	/**
-	 * Intervient dans le chargement de tous les clients depuis la bd
-	 * {@link ClientService#getAllClients()}
-	 */
-	public List<Client> getAllClients() {
-		return ClientService.getAllClients();
+	public List<Ticket> getTicketsFromDatabase(Long buyerId) {
+		return TicketService.getTicketsByBuyerId(buyerId);
 	}
 
-	/**
-	 * Intervient dans le changement de nom d'un client en bd
-	 * {@link Service.ClientService#updateName(String, String)}
-	 */
-	public void updateClientOfDatabase(String newName, String oldName) {
-		ClientService.updateName(newName, oldName);
+	public List<Ticket> getAllTickets() {
+		return TicketService.getAllTickets();
 	}
 
-	/**
-	 * Intervient dans la suppression de clients en bd
-	 * {@link Service.ClientService#deleteClient(List)}
-	 */
-	public void deleteClientFromDatabase(List<Integer> ids) {
-		ClientService.deleteClient(ids);
+	public void updateTicketInDatabase(Ticket ticket) {
+		TicketService.updateTicket(ticket);
+	}
+
+	public void deleteTicketFromDatabase(Long id) {
+		TicketService.deleteTicket(id);
 	}
 
 	public static void main(String[] args) {
 
 		JpaTest test = new JpaTest();
-		Client c1,c2,c3;
-		c1=new Client("jojo@gmail.com", "Jojo", "jojo");
-		c2=  new Client("jaja@gmail.com","jaja","jaja");
-		c3=  new Client("jiji@gmail.com","jiji","jiji");
-		ArrayList<Client> clientsLists= new ArrayList<>();
+		Client client = new Client("client@gmail.com", "Client Name", "clientPassword");
+		Concert concert = new Concert(); // Assurez-vous que l'objet concert soit bien initialisé
+		Ticket ticket = new Ticket(client, concert, LocalDateTime.now(), "Carte bancaire");
 
-		clientsLists.add(c1);
-		clientsLists.add(c2);
-		clientsLists.add(c3);
-		boolean creer = true; // configuration manuelle pour que les clients ne se persite pas 2 fois (à automatiser plutard)
+		// Ajout d'un ticket à la base de données
+		test.addTicketToDatabase(ticket);
 
-		try {
-			/// Persistance d'une liste de clients
-			if (!creer){
-				for (Client c : clientsLists) {
-					test.addClientToDatabase(c);
-				}
-			}
+		// Récupération d'un ticket à partir de son ID
+		Ticket retrievedTicket = test.getTicketFromDatabase(ticket.getId());
+		System.out.println("Ticket récupéré : " + retrievedTicket.getId());
 
-			/// Extraction d'une liste de clients de la bd
-			List<Integer> ids = new ArrayList<>();
-			ids.add(203);
-			ids.add(252);
-			ids.add(253);
-			List<Client> clients_result=test.getClientsFromDatabase(ids);
-            int i=0;
-			for (Client c : clients_result) {
-				System.out.println(clients_result.get(i).getName());
-				++i;
-			}
-
-			///Extraction de tous les clients de la bd
-            List<Client>all_clients=test.getAllClients();
-			int j=0;
-			for (Client c : all_clients) {
-				System.out.println(all_clients.get(j).getName());
-				++j;
-
-			}
-
-			/// Suppression d'une liste de clients de la bd
-			List<Integer> ids_to_delete = new ArrayList<>();
-			ids_to_delete.add(103);
-			test.deleteClientFromDatabase(ids_to_delete);
-
-			/// Mise à jour du nom d'un client de la bd
-			test.updateClientOfDatabase("Aline","Franck");
-
-		} catch (Exception e) {
-			e.printStackTrace();
+		// Récupération de tous les tickets d'un client (par ID)
+		List<Ticket> tickets = test.getTicketsFromDatabase(client.getId());
+		for (Ticket t : tickets) {
+			System.out.println("Ticket pour client " + t.getBuyer().getName());
 		}
+
+		// Mise à jour d'un ticket
+		ticket.setPaymentMethod("Virement bancaire");
+		test.updateTicketInDatabase(ticket);
+
+		// Suppression d'un ticket
+		test.deleteTicketFromDatabase(ticket.getId());
 
 		System.out.println(".. done");
 	}
-
 }
