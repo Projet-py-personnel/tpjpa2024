@@ -10,19 +10,21 @@ public class EntityManagerHelper {
     private static final ThreadLocal<EntityManager> threadLocal;
 
     static {
-        emf = Persistence.createEntityManagerFactory("dev");      
+        emf = Persistence.createEntityManagerFactory("dev");  // créé un objet pattern qui créé des entity managers ( entity Managers factories )
         threadLocal = new ThreadLocal<EntityManager>();
     }
 
     public static EntityManager getEntityManager() {
+        // retourne l'entity manager dans le thread local
         EntityManager em = threadLocal.get();
 
-        if (em == null) {
+        if (em == null) { // on a un nouveau Thread
             em = emf.createEntityManager();
             threadLocal.set(em);
         }
         return em;
     }
+
 
     public static void closeEntityManager() {
         EntityManager em = threadLocal.get();

@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
+
 
 
 @Entity
@@ -28,6 +31,9 @@ public class Concert implements Serializable {
 
    /* @OneToMany(mappedBy = "concert", cascade = CascadeType.ALL, fetch = FetchType.LAZY,orphanRemoval=true)
     private List<Ticket> tickets = new ArrayList<>(); pour moi concert n'a pas besoin de la liste de tickets*/
+
+
+
 
     /// constructeurs
 
@@ -75,7 +81,7 @@ public class Concert implements Serializable {
         doit etre dans la classe association organisation
     }*/
 
-    public String getArtiste(String stare) {
+    public String getArtiste() {
         return artiste;
     }
 

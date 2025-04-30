@@ -1,0 +1,15 @@
+jpa\JpaTest.class
+domain\Personne.class
+servlets\UserInfo.class
+domain\Administrateur.class
+domain\Client.class
+dao\ClientDao.class
+Service\ClientService.class
+domain\Concert.class
+Service\ConcertsService.class
+domain\StatusTickets.class
+jpa\EntityManagerHelper.class
+domain\Organisateur.class
+domain\PaymentMethod.class
+domain\Ticket.class
+servlets\MyServlet.class

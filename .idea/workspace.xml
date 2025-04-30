@@ -5,7 +5,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b87420e5-e594-4a66-9026-3789b4eb458c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/test.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/domain/TP2. JPA.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/MyServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/servlets/UserInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/bilan_de_progression_07_avril_2025.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/criteria_api_req_client.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/deployment_jetty_result.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/derniers_problm.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/echecs_criteria_api_req_client.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/hello_world_aft_deploy.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/notes_et_quelques_ameliorations_probables.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/servelets.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/steps/test_formulaire.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/servlets/MyServlet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/servlets/UserInfo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testjpa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.log" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/test.script" beforeDir="false" afterPath="$PROJECT_DIR$/data/test.script" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Service/ConcertsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Service/ConcertsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ClientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ClientDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Concert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Concert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Personne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Personne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/domain/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/domain/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/EntityManagerHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/EntityManagerHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/jpa/JpaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jpa/JpaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/ClientService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Service/ConcertsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Service/ConcertsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/dao/ClientDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/dao/ClientDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Concert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Concert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Personne.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Personne.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/domain/Ticket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/domain/Ticket.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jpa/EntityManagerHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/EntityManagerHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/jpa/JpaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jpa/JpaTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/log4j.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/angus-activation-2.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/antlr4-runtime-4.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/byte-buddy-1.12.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/classmate-1.5.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/hibernate-commons-annotations-6.0.6.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/hibernate-core-6.2.7.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/hsqldb-2.7.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/istack-commons-runtime-4.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/jakarta.activation-api-2.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/jakarta.inject-api-2.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/jakarta.persistence-api-3.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/jakarta.transaction-api-2.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/jakarta.xml.bind-api-4.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/jandex-3.0.5.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/jaxb-core-4.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/jaxb-runtime-4.0.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/jboss-logging-3.5.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/log4j-1.2.17.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/mysql-connector-j-8.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/protobuf-java-3.21.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/slf4j-api-1.7.30.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/slf4j-log4j12-1.7.30.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/dependency/txw2-4.0.2.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,9 +104,11 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven.testjpa [compile].executor": "Run",
+    "Maven.testjpa [org.eclipse.jetty:jetty-maven-plugin:11.0.16:run].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "Merging master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/logiciels_et_projets/tpjpa2024",
     "node.js.detected.package.eslint": "true",

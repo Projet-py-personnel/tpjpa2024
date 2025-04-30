@@ -3,14 +3,16 @@ package domain;
 import jakarta.persistence.*;
 import javax.management.relation.Role;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 /*@Entity
 @Table(name = "personnes")*/
-@MappedSuperclass
-public class Personne{
+//@MappedSuperclass // in this case the super class is not treated as an entity
+// just a knowledge : ne colonne technique appelée discriminant (nommée DTYPE par défaut), qui permet à Hibernate de déterminer le type de véhicule et donc la classe à instancier
+
+@Entity @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)// car elle permet de faire de bonnes écritures d'après viseo.developpez.com et me semble plus intuitive
+public class Personne {
     /// les attributs de la classse personne
     @Id
     @GeneratedValue
