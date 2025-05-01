@@ -2,11 +2,12 @@ package domain;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tickets")
-public class Ticket {
+public class Ticket implements Serializable {
 
     /// Les attributs de Tickets:
     /// Les informations du clients et
@@ -16,6 +17,7 @@ public class Ticket {
     @GeneratedValue
     private Long id;
     @ManyToOne
+    @JoinColumn(name = "buyer_id", referencedColumnName = "id")
     private Client buyer;
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "concert_id")

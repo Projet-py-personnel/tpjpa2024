@@ -13,7 +13,7 @@ public class OrganisateurService {
     private static EntityManager entityManager;
 
     static {
-        entityManager = Persistence.createEntityManagerFactory("your-persistence-unit").createEntityManager();
+        entityManager = Persistence.createEntityManagerFactory("mysql").createEntityManager();
         organisateurDAO = new OrganisateurDAO(entityManager);
     }
 

@@ -3,54 +3,40 @@ package domain;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
-
-
 
 @Entity
-@Table(name = "concerts")//on peut s'en passer si les noms sont similaires
+@Table(name = "concerts") // Nom de la table dans la base de données (facultatif si c'est le même que le nom de la classe)
 public class Concert {
-    /// attributs de concert
+
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //auto incrémentation
-    @Column(name="concert_id")// nom de la colonne en bd mais on peut s'en passer si les noms sont similaires
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto incrémentation
+    @Column(name = "concert_id") // Nom de la colonne en base (facultatif si c'est le même que le nom du champ)
     private Long id;
+
     private String title;
     private String description;
-    private LocalDateTime date;//heure de début
+    private LocalDateTime date; // Heure de début
     private String location;
-    private int capacity;// nombres de places totales
-    //private int nb_participants;// nombres de tickets pris, doit etre dans une classe association entre organisateurs et concerts
-    //@JoinColumn : Cette annotation permet d’indiquer le nom de la clé étrangère dans la table de l’entité concernée.
+    private int capacity; // Nombre de places totales
     private String artiste;
     private String genreMusical;
     private LocalDateTime heure_fin;
-    private String statut;//annulé ou confirmé
+    private String statut; // Annulé ou confirmé
 
-   /* @OneToMany(mappedBy = "concert", cascade = CascadeType.ALL, fetch = FetchType.LAZY,orphanRemoval=true)
-    private List<Ticket> tickets = new ArrayList<>(); pour moi concert n'a pas besoin de la liste de tickets*/
-
-
-
-
-    /// constructeurs
-
-    public Concert( String title, LocalDateTime date, String location, String artiste, LocalDateTime heure_fin) {
+    // Constructeurs
+    public Concert(String title, LocalDateTime date, String location, String artiste, LocalDateTime heure_fin) {
         this.title = title;
         this.date = date;
         this.location = location;
         this.artiste = artiste;
         this.heure_fin = heure_fin;
-
-
     }
 
     public Concert() {
-        /*this(null);quand faut il utiliser cela ?*/
+        // Constructeur par défaut
     }
-    /// les méthodes de concert
-    /// les getters
+
+    // Getters
     public Long getId() {
         return id;
     }
@@ -75,11 +61,6 @@ public class Concert {
         return capacity;
     }
 
-    /*public int getNb_participants() {
-        return nb_participants;
-        doit etre dans la classe association organisation
-    }*/
-
     public String getArtiste() {
         return artiste;
     }
@@ -96,13 +77,7 @@ public class Concert {
         return statut;
     }
 
-
-
-
-
-
-
-    /// les setters
+    // Setters
     public void setId(Long id) {
         this.id = id;
     }
@@ -127,10 +102,6 @@ public class Concert {
         this.capacity = capacity;
     }
 
-    /*public void setNb_participants(int nb_participants) {
-        this.nb_participants = nb_participants;
-    } doit etre dans la classe association organisation*/
-
     public void setArtiste(String artiste) {
         this.artiste = artiste;
     }
@@ -146,11 +117,4 @@ public class Concert {
     public void setStatut(String statut) {
         this.statut = statut;
     }
-
-
-
-
-
-   /* @JoinColumn(name = "addressId", referencedColumnName = "id")
-    private Address address;*/
 }

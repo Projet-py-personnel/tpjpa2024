@@ -13,7 +13,7 @@ public class PersonneService {
     private static EntityManager entityManager;
 
     static {
-        entityManager = Persistence.createEntityManagerFactory("your-persistence-unit").createEntityManager();
+        entityManager = Persistence.createEntityManagerFactory("mysql").createEntityManager();
         personneDAO = new PersonneDAO(entityManager);
     }
 
